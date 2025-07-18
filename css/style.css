@@ -1,1 +1,19 @@
-/* font */
+/* import arabic font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+/*  import english font  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+:root {
+    --Arabic-font: "IBM Plex Sans Arabic", sans-serif;;    
+    --English-font: "Roboto Mono", monospace;
+    --spr-bg-: #7215c9;
+    --text-color: #ffffff;
+    --secondary-color: #3a1b56;
+    --base-color: rgb(56, 19, 117);
+}
+.darkmod {
+    --spr-bg-: #4a0090;
+    --text-color: #000000;
+    --secondary-color: #b79ad2;
+    --base-color: white;
+
+}
