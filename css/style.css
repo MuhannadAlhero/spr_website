@@ -1,18 +1,245 @@
 /* import arabic font */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
 /*  import english font  */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-
 :root {
     --Arabic-font: "IBM Plex Sans Arabic", sans-serif;
-    ;
+    --Arabic-second-font: "Almarai", sans-serif;
     --English-font: "Roboto Mono", monospace;
     --bg-color: #F8f8f8;
     --primary-color: #170D21;
-    --secondry-color : #5F3B83;
+    --secondry-color: #5F3B83;
     --icon-color: #b092df;
-    --gray-color:#7b7b7b;
+    --gray-color: #7b7b7b;
     --dark-gray: #4f4f4f;
+}
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: var(--Arabic-second-font);
+    background-color: var(--bg-color);
+}
+/* Start Nav-bar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    padding: 1em 0;
+}
+.logo {
+    margin-left: auto;
+}
+nav ul {
+    display: flex;
+    gap: 3em;
+}
+nav ul li {
+    color: var(--secondry-color);
 
 }
+nav ul
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+    background-color: var(--secondry-color);
+    font-size: 1em;
+}
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: rgb(0, 0, 0);
+    padding: 14px 13px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    margin-right: 2em;
+}
+.dropdown i {
+    margin: 0 0.4em;
+}
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    transition: .4s;
+    background-color: var(--icon-color);
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.nav-link:hover {
+    color: var(--primary-color);
 
+}
+.logo {
+    mix-blend-mode: color-burn;
+
+}
+/* End Nav-bar */
+/* ------------------------------------------- */
+/* Start section hero */
+#arabic-language {
+    direction: rtl;
+    text-align: right;
+}
+.spr-comminty img {
+    width: 590px;
+    height: auto;
+    border-radius: 30px;
+    filter: grayscale(100%);
+}
+.spr-comminty {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-top: 2em;
+    flex-wrap: wrap;
+    gap: 6em;
+}
+.spr-comminty .text {
+    direction: rtl;
+    text-align: right;
+}
+.text h1 {
+    color: var(--secondry-color);
+    font-size: 7em;
+    font-weight: 700;
+}
+.text h2 {
+    font-size: 3em;
+    color: #170D21;
+}
+.text p {
+    color: var(--gray-color);
+}
+/* ----CARDS---- */
+.cards {
+    flex-wrap: wrap;
+}
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12em;
+    margin-top: 10em;
+}
+.card img {
+    width: 590px;
+    height: auto;
+    border-radius: 30px;
+}
+.card .text {
+    direction: rtl;
+}
+.card .text h1 {
+    font-size: 68px;
+}
+.card .text p {
+    font-size: 24px;
+    font-weight: 500;
+
+}
+.card-reverse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    gap: 14em;
+
+}
+.card-reverse img {
+    width: 590px;
+    height: auto;
+    border-radius: 30px;
+}
+.card-reverse .text h1 {
+    font-size: 68px;
+    direction: rtl;
+
+}
+.card-reverse .text p {
+    font-size: 23px;
+    direction: rtl;
+    font-weight: 700;
+}
+/* نهاية بطايق سبر */
+/* Start Section Servise */
+/* قائمة خدامتنا */
+.services {
+    padding: 4rem 2rem;
+    direction: rtl;
+    text-align: right;
+    margin-top: 5em;
+}
+.title {
+    color: var(--secondry-color);
+    font-size: 4em;
+}
+.card-box {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    direction: rtl;
+    gap: 30px;
+    flex-wrap: wrap;
+    position: relative;
+}
+.card-information {
+    position: absolute;
+    background-color: #fff;
+    padding: 20px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    position: relative;
+    height: 200px;
+    width: 308px;
+}
+.card-information i {
+    margin: 1em;
+    font-size: 1.5em;
+    background-color: #5F3B83;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+}
+.card-information h4 {
+    margin-bottom: 2em;
+    font-size: 1.5em;
+}
+.card-information a {
+    padding: 0.8em;
+    color: white;
+    border-radius: 30px;
+    background-color: #5F3B83;
+}
